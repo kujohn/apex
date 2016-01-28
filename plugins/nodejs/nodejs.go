@@ -17,7 +17,7 @@ func init() {
 
 // prelude script template.
 var prelude = template.Must(template.New("prelude").Parse(`try {
-  var config = require('./{{.EnvFile}}');
+  var config = require('./{{.EnvFile}}')
   for (var key in config) {
     process.env[key] = config[key]
   }
